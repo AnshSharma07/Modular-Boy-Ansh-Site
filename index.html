@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modular Boy Ansh | Minecraft Projects</title>
+
+<style>
+:root {
+    --bg:#0c0f14;
+    --card:#131822;
+    --accent:#00ff88;
+    --text:#e6edf3;
+    --muted:#8b949e;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+/* Particle Canvas */
+#particles{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+/* Navbar */
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 8%;
+    border-bottom:1px solid #1f2633;
+    background:rgba(15,18,25,0.85);
+    position:sticky;
+    top:0;
+    backdrop-filter:blur(6px);
+}
+
+.logo{font-weight:600;}
+
+nav a{
+    color:var(--muted);
+    margin-left:25px;
+    font-size:0.9rem;
+    transition:0.2s;
+}
+
+nav a:hover{color:var(--accent);}
+
+/* Hero */
+.hero{
+    padding:100px 8% 60px;
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:2.8rem;
+    margin-bottom:15px;
+}
+
+.hero span{color:var(--accent);}
+.hero p{color:var(--muted);}
+
+/* Search */
+.search-container{
+    padding:0 8% 40px;
+}
+
+.search-container input{
+    width:100%;
+    padding:14px 18px;
+    background:#131822;
+    border:1px solid #1f2633;
+    border-radius:8px;
+    color:var(--text);
+    font-size:0.9rem;
+    outline:none;
+}
+
+.search-container input:focus{
+    border-color:var(--accent);
+}
+
+/* Sections */
+section{padding:60px 8%;}
+
+section h2{
+    margin-bottom:30px;
+    font-size:1.5rem;
+    border-left:4px solid var(--accent);
+    padding-left:10px;
+}
+
+/* Grid */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+}
+
+/* Cards */
+.card{
+    background:var(--card);
+    padding:20px;
+    border-radius:10px;
+    border:1px solid #1f2633;
+    transition:0.25s ease;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:var(--accent);
+    box-shadow:0 0 15px rgba(0,255,136,0.25);
+}
+
+.card h3{
+    font-size:1rem;
+    margin-bottom:8px;
+}
+
+.card p{
+    font-size:0.85rem;
+    color:var(--muted);
+    margin-bottom:12px;
+}
+
+.button{
+    display:inline-block;
+    padding:7px 13px;
+    border:1px solid var(--accent);
+    border-radius:6px;
+    font-size:0.8rem;
+    color:var(--accent);
+    transition:0.2s;
+}
+
+.button:hover{
+    background:var(--accent);
+    color:black;
+}
+
+.upcoming-badge{
+    display:inline-block;
+    font-size:0.7rem;
+    padding:3px 8px;
+    background:rgba(0,255,136,0.15);
+    border:1px solid var(--accent);
+    border-radius:4px;
+    margin-bottom:8px;
+    color:var(--accent);
+}
+
+footer{
+    padding:40px 8%;
+    text-align:center;
+    font-size:0.8rem;
+    color:var(--muted);
+    border-top:1px solid #1f2633;
+}
+</style>
+</head>
+<body>
+
+<canvas id="particles"></canvas>
+
+<nav>
+    <div class="logo">Modular Boy Ansh</div>
+    <div>
+        <a href="#datapacks">Datapacks</a>
+        <a href="#mods">Mods</a>
+        <a href="#upcoming">Upcoming</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>Building <span>Chaotic</span> Minecraft.</h1>
+    <p>Fun Minecraft Datapacks & Mods With Multiplayer Compatability</p>
+</div>
+
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search mods or datapacks...">
+</div>
+
+<section id="datapacks">
+<h2>Datapacks</h2>
+<div class="grid">
+
+<div class="card"><h3>Every Block Drops Random Item</h3><p>Random Drops.</p><a class="button" href="https://modrinth.com/datapack/random-drops-every-block-drops-a-random-item!" target="_blank">View</a></div>
+<div class="card"><h3>Leaves Drop OP Items</h3><p>Leaves -> Op Items</p><a class="button" href="https://modrinth.com/datapack/leaves-drop-op-items" target="_blank">View</a></div>
+<div class="card"><h3>Mobs Drop Random OP Items</h3><p>Kill mobs to become powerfull</p><a class="button" href="https://modrinth.com/datapack/mobs-drop-random+op-items" target="_blank">View</a></div>
+<div class="card"><h3>Shearing Sheep Drops OP Loot</h3><p>Shearing is now OP.</p><a class="button" href="https://modrinth.com/datapack/shearing-sheeps-drop-op-loot" target="_blank">View</a></div>
+<div class="card"><h3>Everything is Random</h3><p>Pure chaos survival.</p><a class="button" href="https://modrinth.com/datapack/minecraft-but-everything-is-random" target="_blank">View</a></div>
+<div class="card"><h3>OP Damage Drops</h3><p>Damage = rewards.</p><a class="button" href="https://modrinth.com/datapack/op-damage-drops" target="_blank">View</a></div>
+<div class="card"><h3>OP Dirt & Grass</h3><p>Dirt becomes Super Dirt</p><a class="button" href="https://modrinth.com/datapack/op-dirt+grass-block" target="_blank">View</a></div>
+<div class="card"><h3>Stone Drops OP Items</h3><p>Mining made Fun</p><a class="button" href="https://modrinth.com/datapack/stone-drops-op-items" target="_blank">View</a></div>
+<div class="card"><h3>Random Mobs Every 20s</h3><p>Constant challenge spawns.</p><a class="button" href="https://modrinth.com/datapack/random-mobs-spawn-ever-20-seconds" target="_blank">View</a></div>
+<div class="card"><h3>Custom OP Totems</h3><p>8 new survival totems.</p><a class="button" href="https://modrinth.com/datapack/op-custom-totems-datapack-(8-new-totems-+-detonator-survival-f" target="_blank">View</a></div>
+<div class="card"><h3>Teleport Every 45s</h3><p>Random teleport challenge.</p><a class="button" href="https://modrinth.com/datapack/minecraft-but-you-teleport-every-45-seconds" target="_blank">View</a></div>
+<div class="card"><h3>TNT Drops Every 15s</h3><p>Explosive survival mode.</p><a class="button" href="https://modrinth.com/datapack/tnt-drops-every-15-seconds" target="_blank">View</a></div>
+<div class="card"><h3>Ores Drop OP Loot</h3><p>Ores = OP.</p><a class="button" href="https://modrinth.com/datapack/ores-drop-op-loot-datapack" target="_blank">View</a></div>
+
+</div>
+</section>
+
+<section id="mods">
+<h2>Mods</h2>
+<div class="grid">
+
+<div class="card"><h3>Villagers Trade OP Items</h3><p>Villagers but usefull</p><a class="button" href="https://modrinth.com/mod/villagers-trade-op-item" target="_blank">View</a></div>
+<div class="card"><h3>Custom Sticks</h3><p>Sticks with special abilities.</p><a class="button" href="https://modrinth.com/mod/custom-sticks" target="_blank">View</a></div>
+<div class="card"><h3>Better Piglin Bartering</h3><p>Nether Process upgraded.</p><a class="button" href="https://modrinth.com/mod/better-piglin-bartering" target="_blank">View</a></div>
+
+
+</div>
+</section>
+
+<section id="upcoming">
+<h2>Upcoming Projects</h2>
+<div class="grid">
+
+<div class="card"><div class="upcoming-badge">In Development</div><h3>Color Floor Survival</h3><p>Only one color block is safe each minute.</p></div>
+<div class="card"><div class="upcoming-badge">In Development</div><h3>Inventory Randomizer</h3><p>Random Op Items every 30 seconds. </p></div>
+<div class="card"><div class="upcoming-badge">Coming Soon</div><h3>Mob Ability Randomizer</h3><p>Every mob gets random powers.</p></div>
+<div class="card"><div class="upcoming-badge">Prototype</div><h3>Timed Loot Storm</h3><p>Sky rains OP loot every 60s.</p></div>
+
+</div>
+</section>
+
+<footer>
+© 2026 Modular Boy Ansh — Minecrafter!
+</footer>
+
+<script>
+const searchInput=document.getElementById('searchInput');
+const cards=document.querySelectorAll('.card');
+
+searchInput.addEventListener('keyup',function(){
+    let filter=searchInput.value.toLowerCase();
+    cards.forEach(card=>{
+        let text=card.innerText.toLowerCase();
+        card.style.display=text.includes(filter)?"block":"none";
+    });
+});
+
+const canvas=document.getElementById("particles");
+const ctx=canvas.getContext("2d");
+
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let particles=[];
+for(let i=0;i<80;i++){
+    particles.push({
+        x:Math.random()*canvas.width,
+        y:Math.random()*canvas.height,
+        size:Math.random()*2+1,
+        speed:Math.random()*1+0.5
+    });
+}
+
+function animate(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.fillStyle="rgba(0,255,136,0.4)";
+    particles.forEach(p=>{
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+        ctx.fill();
+        p.y+=p.speed;
+        if(p.y>canvas.height){
+            p.y=0;
+            p.x=Math.random()*canvas.width;
+        }
+    });
+    requestAnimationFrame(animate);
+}
+animate();
+
+window.addEventListener("resize",()=>{
+    canvas.width=window.innerWidth;
+    canvas.height=window.innerHeight;
+});
+</script>
+
+</body>
+</html>
