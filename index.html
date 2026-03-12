@@ -23,6 +23,7 @@ body{
     overflow-x:hidden;
 }
 
+/* Particle Background */
 #particles{
     position:fixed;
     top:0;
@@ -32,6 +33,7 @@ body{
     z-index:-1;
 }
 
+/* Navbar */
 nav{
     display:flex;
     justify-content:space-between;
@@ -50,11 +52,11 @@ nav a{
     margin-left:25px;
     font-size:0.9rem;
     transition:0.2s;
-    text-decoration:none;
 }
 
 nav a:hover{color:var(--accent);}
 
+/* Hero */
 .hero{
     padding:100px 8% 60px;
     max-width:900px;
@@ -68,6 +70,7 @@ nav a:hover{color:var(--accent);}
 .hero span{color:var(--accent);}
 .hero p{color:var(--muted);}
 
+/* Search */
 .search-container{
     padding:0 8% 40px;
 }
@@ -87,6 +90,7 @@ nav a:hover{color:var(--accent);}
     border-color:var(--accent);
 }
 
+/* Sections */
 section{padding:60px 8%;}
 
 section h2{
@@ -96,12 +100,14 @@ section h2{
     padding-left:10px;
 }
 
+/* Grid */
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:20px;
 }
 
+/* Cards */
 .card{
     background:var(--card);
     padding:20px;
@@ -135,7 +141,6 @@ section h2{
     font-size:0.8rem;
     color:var(--accent);
     transition:0.2s;
-    text-decoration:none;
 }
 
 .button:hover{
@@ -143,6 +148,7 @@ section h2{
     color:black;
 }
 
+/* Upcoming Badge */
 .upcoming-badge{
     display:inline-block;
     font-size:0.7rem;
@@ -154,6 +160,7 @@ section h2{
     color:var(--accent);
 }
 
+/* Suggest Section */
 .suggest-box{
     max-width:700px;
 }
@@ -208,35 +215,28 @@ footer{
 }
 </style>
 </head>
-
 <body>
 
 <canvas id="particles"></canvas>
 
 <nav>
-<div class="logo">Modular Boy Ansh</div>
-<div>
-<a href="#latest">Latest</a>
-<a href="#datapacks">Datapacks</a>
-<a href="#mods">Mods</a>
-<a href="#upcoming">Upcoming</a>
-<a href="#suggest">Suggest</a>
-</div>
+    <div class="logo">Modular Boy Ansh</div>
+    <div>
+        <a href="#datapacks">Datapacks</a>
+        <a href="#mods">Mods</a>
+        <a href="#upcoming">Upcoming</a>
+        <a href="#suggest">Suggest</a>
+    </div>
 </nav>
 
 <div class="hero">
-<h1>Building <span>Unfair</span> Minecraft.</h1>
-<p>Chaotic datapacks and survival-breaking mods. Multiplayer supported.</p>
+    <h1>Building <span>Unfair</span> Minecraft.</h1>
+    <p>Chaotic datapacks and survival-breaking mods. Multiplayer supported.</p>
 </div>
 
 <div class="search-container">
-<input type="text" id="searchInput" placeholder="Search mods or datapacks...">
+    <input type="text" id="searchInput" placeholder="Search mods or datapacks...">
 </div>
-
-<section id="latest">
-<h2>Latest Creation</h2>
-
-<div class="grid">
 
 <div class="card">
 <div class="upcoming-badge">NEW</div>
@@ -244,95 +244,63 @@ footer{
 <p>Your inventory constantly changes.</p>
 <a class="button" href="https://www.mediafire.com/file/fkettgr6915vz86/Inventory_Randomizer.jar/file" target="_blank">Download</a>
 </div>
-
-</div>
-</section>
-
+    
 <section id="datapacks">
 <h2>Datapacks</h2>
-
 <div class="grid">
 
-<!-- (unchanged datapacks kept same) -->
+<div class="card"><h3>Every Block Drops Random Item</h3><p>Break anything. Get anything.</p><a class="button" href="https://modrinth.com/datapack/random-drops-every-block-drops-a-random-item!" target="_blank">View</a></div>
+<div class="card"><h3>Leaves Drop OP Items</h3><p>Leaves = OP. </p><a class="button" href="https://modrinth.com/datapack/leaves-drop-op-items" target="_blank">View</a></div>
+<div class="card"><h3>Mobs Drop Random OP Items</h3><p> Hunt To Upgrade</p><a class="button" href="https://modrinth.com/datapack/mobs-drop-random+op-items" target="_blank">View</a></div>
+<div class="card"><h3>Shearing Sheep Drops OP Loot</h3><p>Shearing is now OP.</p><a class="button" href="https://modrinth.com/datapack/shearing-sheeps-drop-op-loot" target="_blank">View</a></div>
+<div class="card"><h3>Everything is Random</h3><p>Pure chaos survival.</p><a class="button" href="https://modrinth.com/datapack/minecraft-but-everything-is-random" target="_blank">View</a></div>
+<div class="card"><h3>OP Damage Drops</h3><p>Damage = rewards.</p><a class="button" href="https://modrinth.com/datapack/op-damage-drops" target="_blank">View</a></div>
+<div class="card"><h3>OP Dirt & Grass</h3><p>Dirt becomes Op.</p><a class="button" href="https://modrinth.com/datapack/op-dirt+grass-block" target="_blank">View</a></div>
+<div class="card"><h3>Stone Drops OP Items</h3><p>Mining made Op.</p><a class="button" href="https://modrinth.com/datapack/stone-drops-op-items" target="_blank">View</a></div>
+<div class="card"><h3>Random Mobs Every 20s</h3><p>Constant mobs spawns.</p><a class="button" href="https://modrinth.com/datapack/random-mobs-spawn-ever-20-seconds" target="_blank">View</a></div>
+<div class="card"><h3>Custom OP Totems</h3><p>8 new survival totems.</p><a class="button" href="https://modrinth.com/datapack/op-custom-totems-datapack-(8-new-totems-+-detonator-survival-f" target="_blank">View</a></div>
+<div class="card"><h3>Teleport Every 45s</h3><p>Random teleport challenge.</p><a class="button" href="https://modrinth.com/datapack/minecraft-but-you-teleport-every-45-seconds" target="_blank">View</a></div>
+<div class="card"><h3>TNT Drops Every 15s</h3><p>Explosive survival mode.</p><a class="button" href="https://modrinth.com/datapack/tnt-drops-every-15-seconds" target="_blank">View</a></div>
+<div class="card"><h3>Ores Drop OP Loot</h3><p>Mining jackpot system.</p><a class="button" href="https://modrinth.com/datapack/ores-drop-op-loot-datapack" target="_blank">View</a></div>
 
 </div>
 </section>
 
 <section id="mods">
 <h2>Mods</h2>
-
 <div class="grid">
 
-<div class="card">
-<h3>Villagers Trade OP Items</h3>
-<p>Custom Villagers with Op Trades</p>
-<a class="button" href="https://modrinth.com/mod/villagers-trade-op-item" target="_blank">View</a>
-</div>
-
-<div class="card">
-<h3>Custom Sticks</h3>
-<p>Sticks with special abilities.</p>
-<a class="button" href="https://modrinth.com/mod/custom-sticks" target="_blank">View</a>
-</div>
-
-<div class="card">
-<h3>Better Piglin Bartering</h3>
-<p>Better Piglin Loot.</p>
-<a class="button" href="https://modrinth.com/mod/better-piglin-bartering" target="_blank">View</a>
-</div>
-
-<div class="card">
+    <div class="card">
 <h3>Inventory Randomizer</h3>
 <p>Your inventory constantly changes.</p>
 <a class="button" href="https://www.mediafire.com/file/fkettgr6915vz86/Inventory_Randomizer.jar/file" target="_blank">Download</a>
 </div>
-
+<div class="card"><h3>Villagers Trade OP Items</h3><p>Custom Villagers with Op Trades</p><a class="button" href="https://modrinth.com/mod/villagers-trade-op-item" target="_blank">View</a></div>
+<div class="card"><h3>Custom Sticks</h3><p>Sticks with special abilities.</p><a class="button" href="https://modrinth.com/mod/custom-sticks" target="_blank">View</a></div>
+<div class="card"><h3>Better Piglin Bartering</h3><p>Better Piglin Loot.</p><a class="button" href="https://modrinth.com/mod/better-piglin-bartering" target="_blank">View</a></div>
 </div>
 </section>
 
 <section id="upcoming">
 <h2>Upcoming Projects</h2>
-
 <div class="grid">
 
-<div class="card">
-<div class="upcoming-badge">In Development</div>
-<h3>Color Floor Survival</h3>
-<p>Only one color block is safe each minute.</p>
-</div>
-
-<div class="card">
-<div class="upcoming-badge">Coming Soon</div>
-<h3>Mob Ability Randomizer</h3>
-<p>Every mob gets random powers.</p>
-</div>
-
-<div class="card">
-<div class="upcoming-badge">Prototype</div>
-<h3>Timed Loot Storm</h3>
-<p>Sky rains OP loot every 60s.</p>
-</div>
+<div class="card"><div class="upcoming-badge">In Development</div><h3>Color Floor Survival</h3><p>Only one color block is safe each minute.</p></div>
+<div class="card"><div class="upcoming-badge">Coming Soon</div><h3>Mob Ability Randomizer</h3><p>Every mob gets random powers.</p></div>
+<div class="card"><div class="upcoming-badge">Prototype</div><h3>Timed Loot Storm</h3><p>Sky rains OP loot every 60s.</p></div>
 
 </div>
 </section>
 
 <section id="suggest">
 <h2>Suggest a Mod Idea</h2>
-
 <div class="suggest-box">
-
-<p class="suggest-text">
-Got a crazy idea? Drop it below. If I build it, you might get credited.
-</p>
+<p class="suggest-text">Got a crazy idea? Drop it below. If I build it, you might get credited.</p>
 
 <form action="https://formspree.io/f/maqdgzyl" method="POST">
-
 <input type="text" name="title" placeholder="Mod / Datapack Title Idea" required>
-
 <textarea name="details" rows="6" placeholder="Explain the idea in detail..." required></textarea>
-
 <button type="submit">Submit Idea</button>
-
 </form>
 
 </div>
@@ -343,92 +311,56 @@ Got a crazy idea? Drop it below. If I build it, you might get credited.
 </footer>
 
 <script>
-
 const searchInput=document.getElementById('searchInput');
-
 const cards=document.querySelectorAll('.card');
 
 searchInput.addEventListener('keyup',function(){
-
 let filter=searchInput.value.toLowerCase();
-
 cards.forEach(card=>{
-
 let text=card.innerText.toLowerCase();
-
 card.style.display=text.includes(filter)?"block":"none";
-
+});
 });
 
-});
-
+/* Particles */
 const canvas=document.getElementById("particles");
-
 const ctx=canvas.getContext("2d");
-
 canvas.width=window.innerWidth;
-
 canvas.height=window.innerHeight;
 
 let particles=[];
-
 for(let i=0;i<80;i++){
-
 particles.push({
-
 x:Math.random()*canvas.width,
-
 y:Math.random()*canvas.height,
-
 size:Math.random()*2+1,
-
 speed:Math.random()*1+0.5
-
 });
-
 }
 
 function animate(){
-
 ctx.clearRect(0,0,canvas.width,canvas.height);
-
 ctx.fillStyle="rgba(0,255,136,0.4)";
-
 particles.forEach(p=>{
-
 ctx.beginPath();
-
 ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
-
 ctx.fill();
-
 p.y+=p.speed;
-
 if(p.y>canvas.height){
-
 p.y=0;
-
 p.x=Math.random()*canvas.width;
-
 }
-
 });
-
 requestAnimationFrame(animate);
-
 }
-
 animate();
 
 window.addEventListener("resize",()=>{
-
 canvas.width=window.innerWidth;
-
 canvas.height=window.innerHeight;
-
 });
-
 </script>
 
 </body>
+
 </html>
